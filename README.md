@@ -1,0 +1,7 @@
+Music Composer
+======================
+Music Composer develops a comprehensive AudioSinal class that provides a convenient interface to manipulate audio signals. The AudioSignal class encapsulates information about a digital audio signal that has been sampled using Linear Pulse Code Modulation (LPCM). An audio signal is essentially a series of Sample (alias for 16-bit integers defined in RIFF.h) entries.  Example: {0, 10, 15, 10, 0, -10, -15, -10, 0} where each value in the list is of data type Sample.  In addition to the actual data, each audio signal also contains the following metadata associated with the signal:
+
+    sampleRate: This value determines the number of samples that constitutes one (actual) second of audio signal. For          example, if the sample rate is 1000 then one thousand consecutive numbers provide the necessary data to construct 1 second of audio. Typically the sample rates are at least 8000 for decent quality spoken audio and can be as high as 44100 for CD quality music.
+    
+    bitsPerSample: This value determines the minimum and maximum values for each sample in the actual aduio signal/wave.  Currently, only 8-bit and 16-bit values are used. 8-bits limit the range of each sample to -128 to +127.  On the other hand, 16-bit values provide higher fidelity reproduction by proving a range from -65536 to +65535.  Typically 16-bit values are used to provide a good dynamic range and fidelity of music.  Read more information about this topic of quality via Wikipedia article: http://en.wikipedia.org/wiki/Audio_bit_depth.
